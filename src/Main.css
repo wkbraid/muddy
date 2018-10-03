@@ -1,11 +1,23 @@
 .Main {
-  text-align: center;
-  background-color: #282c34;
+  text-align: left;;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   font-size: calc(10px + 1vmin);
-  color: white;
+  color: #282c34;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+svg.Overlap {
+  stroke: black;
+  fill: white;
+}
+
+
+.fill-hatch {
+  fill: lightblue;
 }
