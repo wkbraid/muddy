@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 class Classroom extends Component {
   static defaultProps = {
@@ -9,7 +7,7 @@ class Classroom extends Component {
     children:   5,
   };
   render () {
-    const { height, width, children, ...props } = this.props;
+    const { height, width, children } = this.props;
     var rows = [];
     var startx = 50;
     var stepx  = (width - 100)/(children - 1);
@@ -25,7 +23,6 @@ class Classroom extends Component {
 }
 
 class Child extends Component {
-  static defaultProps = { muddy: false };
   render () {
     return (
       <circle 
@@ -47,7 +44,7 @@ class Child extends Component {
 
   tick() {
     this.setState({
-      vary: this.state.vary * -1
+      //vary: this.state.vary * -1
     });
   }
 
@@ -61,21 +58,4 @@ class Child extends Component {
   }
 }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-
-          <Classroom children="4" width="500"/>
-          <Classroom children="3" width="500"/>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-        </header>
-      </div>
-    );
-  }
-}
-
-export default App;
+export { Classroom, Child };
